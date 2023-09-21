@@ -13,5 +13,5 @@ request(urlToRequest, function (error, response, body) {
     if (err) {
       console.error(err);
     }
-  })
+  });
 });
