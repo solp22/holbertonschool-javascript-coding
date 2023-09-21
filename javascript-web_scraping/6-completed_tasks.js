@@ -11,7 +11,7 @@ request(urlToRequest, function (error, response, body) {
   const tasksCompleted = {};
   data.forEach(task => {
     if (task.completed === true) {
-      if (!tasksCompleted[task.userId]){
+      if (!tasksCompleted[task.userId]) {
         tasksCompleted[task.userId] = 0;
       }
       tasksCompleted[task.userId] += 1;
