@@ -10,10 +10,10 @@ request(urlToRequest, function (error, response, body) {
   const data = JSON.parse(body);
   tasksCompleted = {};
   data.forEach(task => {
-    if (!tasksCompleted[task.userId]) {
-      tasksCompleted[task.userId] = 0;
-    }
     if (task.completed === true ){
+      if (!tasksCompleted[task.userId]) {
+        tasksCompleted[task.userId] = 0;
+      }
       tasksCompleted[task.userId] += 1;
     }
   });
