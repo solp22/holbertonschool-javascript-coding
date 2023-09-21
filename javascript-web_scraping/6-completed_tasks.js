@@ -8,7 +8,7 @@ request(urlToRequest, function (error, response, body) {
     console.error('error:', error);
   }
   const data = JSON.parse(body);
-  tasksCompleted = {};
+  const tasksCompleted = {};
   data.forEach(task => {
     if (task.completed === true ){
       if (!tasksCompleted[task.userId]) {
